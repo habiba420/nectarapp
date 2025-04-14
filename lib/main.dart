@@ -11,6 +11,7 @@ Future<void> main() async {
   );
   runApp(
     DevicePreview(
+      tools: [],
       enabled: true,
       builder: (context) => const NectarApp(),
     ),
