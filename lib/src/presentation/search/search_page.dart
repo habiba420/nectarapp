@@ -21,8 +21,7 @@ class _SearchPageState extends State<SearchPage> {
             Center(child: LabelView(label: "Search")),
 
 
-
-            const SizedBox(
+             SizedBox(
               height: 100,
 
             ),
