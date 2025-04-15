@@ -16,7 +16,9 @@ class ProductsStreamSliverList extends StatelessWidget {
     return StreamBuilder<ProductState>(
       stream: ShopProvider.of(context).stream,
       builder: (context, snapshot) {
+
         debugPrint("refetching the stream ${snapshot.connectionState}");
+
 
         if (snapshot.hasError) {
           return SliverToBoxAdapter(
@@ -24,31 +26,41 @@ class ProductsStreamSliverList extends StatelessWidget {
             child: Text(snapshot.error.toString()),
           );
 
+
         }
         if (!snapshot.hasData) {
+
           return const SliverToBoxAdapter(
 
             child: Center(
+
               child: Text("A"),
             ),
           );
         }
+
         final pState = snapshot.data ?? ProductState.none;
 
 
         if (pState.filterData.isEmpty) {
           return const SliverFillRemaining(
-            child: Center(child: Text("No product found")),
+            child:
+            Center(
+                child: Text("No product found")
+            ),
           );
         }
         return SliverPadding(
 
           padding: const EdgeInsets.symmetric(horizontal: 24),
           sliver: SliverGrid.builder(
+
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
+
               crossAxisSpacing: 16,
               mainAxisSpacing: 16,
+
             ),
             itemCount: pState.filterData.length,
 
