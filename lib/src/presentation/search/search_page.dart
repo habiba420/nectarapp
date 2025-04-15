@@ -21,10 +21,12 @@ class _SearchPageState extends State<SearchPage> {
             Center(child: LabelView(label: "Search")),
 
 
+
             const SizedBox(
               height: 100,
 
             ),
+
 
 
             Text('Coming Soon...'),
