@@ -1,5 +1,6 @@
 //search
 import 'package:flutter/material.dart';
+
 import '../_common/widgets/label_view.dart';
 
 class SearchPage extends StatefulWidget {
@@ -15,11 +16,17 @@ class _SearchPageState extends State<SearchPage> {
     return const Scaffold(
       body: SafeArea(
         child: Column(
+
           children: [
             Center(child: LabelView(label: "Search")),
+
+
             const SizedBox(
               height: 100,
+
             ),
+
+
             Text('Coming Soon...'),
           ],
         ),
