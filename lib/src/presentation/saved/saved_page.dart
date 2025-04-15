@@ -1,3 +1,4 @@
+// save
 import 'package:flutter/material.dart';
 
 import '../../infrastructure/enums/page_name.dart';
@@ -16,9 +17,7 @@ class _SavedPageState extends State<SavedPage> {
   void initState() {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
-
       ShopProvider.of(context, listen: false).onTabChange(PageName.favorite);
-
     });
   }
 
@@ -28,19 +27,13 @@ class _SavedPageState extends State<SavedPage> {
     return const CustomScrollView(
       slivers: [
         SliverPadding(
-
           padding: EdgeInsets.only(bottom: 16, left: 24, right: 24),
-
           sliver: SliverToBoxAdapter(
             child: Align(
               alignment: Alignment.center,
               child: Padding(
-
-
                 padding: EdgeInsets.all(8.0),
-
                 child: LabelView(label: "Favorite"),
-                
               ),
             ),
           ),
