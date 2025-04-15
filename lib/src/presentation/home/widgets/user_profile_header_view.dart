@@ -51,23 +51,33 @@ class _UserProfileHeaderViewState extends State<UserProfileHeaderView> {
             const Spacer(),
             IconButton(
               onPressed: () {},
+
               icon: const Icon(Icons.notification_important_rounded),
               color: AppTheme.primary,
             ),
             InkWell(
+
               onTap: () {
                 context.push(AppRoute.author);
               },
               child: Material(
+
                 shape: const CircleBorder(
+                  
                   side: BorderSide(color: AppTheme.primary),
                 ),
+
                 clipBehavior: Clip.hardEdge,
                 child: Image.network(
+
                   widget.model.avatar,
                   height: 48,
+
+
                   width: 48,
+
                 ),
+
               ),
             )
           ],
