@@ -28,13 +28,18 @@ class _HomeFilterTabsState extends State<HomeFilterTabs> with AutomaticKeepAlive
                   padding: const EdgeInsets.only(right: 8.0),
                   child: ChoiceChip(
                     selected: selectedTab == e,
+
                     label: Text(e.title),
                     onSelected: (value) {
                       selectedTab = e;
+
+
                       ShopProvider.of(context).productByType(e);
+
                       setState(() {});
                     },
                   ),
+                  
                 ),
               )
               .toList(),
