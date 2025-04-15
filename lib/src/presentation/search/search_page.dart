@@ -27,6 +27,7 @@ class _SearchPageState extends State<SearchPage> {
             ),
 
 
+
             Text('Coming Soon...'),
           ],
         ),
